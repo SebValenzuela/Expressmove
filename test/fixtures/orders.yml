@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+  product: one
+  fecha: 2019-07-31
+  monto: 1.5
+
+two:
+  customer: two
+  product: two
+  fecha: 2019-07-31
+  monto: 1.5
