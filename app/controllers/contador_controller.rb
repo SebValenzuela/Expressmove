@@ -1,0 +1,2 @@
+class ContadorController < ApplicationController
+end
