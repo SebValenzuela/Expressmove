@@ -69,6 +69,6 @@ class ConveyorController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def conveyor_params
-      params.require(:conveyor).permit(:nombre, :rut, :email, :telefono, :direccion)
+      params.require(:conveyor).permit(:producto, :fecha, :direccion)
     end
 end
