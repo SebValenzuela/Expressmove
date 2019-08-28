@@ -41,7 +41,7 @@ class ConveyorController < ApplicationController
   # PATCH/PUT /conveyors/1.json
   def update
     respond_to do |format|
-      if @conveyor.update(transportador_params)
+      if @conveyor.update(conveyor_params)
         format.html { redirect_to @conveyor, notice: 'Conveyor was successfully updated.' }
         format.json { render :show, status: :ok, location: @conveyor }
       else
