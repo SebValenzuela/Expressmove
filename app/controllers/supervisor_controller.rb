@@ -1,34 +1,34 @@
-class SupervisorController < ApplicationController
+class SupervisorsController < ApplicationController
   before_action :set_supervisor, only: [:show, :edit, :update, :destroy]
 
-  # GET /supervisor
-  # GET /supervisor.json
+  # GET /supervisors
+  # GET /supervisors.json
   def index
-    @supervisor = supervisor.all
+    @supervisors = Supervisor.all
   end
 
-  # GET /supervisor/1
-  # GET /supervisor/1.json
+  # GET /supervisors/1
+  # GET /supervisors/1.json
   def show
   end
 
-  # GET /supervisor/new
+  # GET /supervisors/new
   def new
-    @supervisor = supervisor.new
+    @supervisor = Supervisor.new
   end
 
-  # GET /supervisor/1/edit
+  # GET /supervisors/1/edit
   def edit
   end
 
-  # POST /supervisor
-  # POST /supervisor.json
+  # POST /supervisors
+  # POST /supervisors.json
   def create
-    @supervisor = supervisor.new(supervisor_params)
+    @supervisor = Supervisor.new(supervisor_params)
 
     respond_to do |format|
       if @supervisor.save
-        format.html { redirect_to @supervisor, notice: 'supervisor was successfully created.' }
+        format.html { redirect_to @supervisor, notice: 'Supervisor was successfully created.' }
         format.json { render :show, status: :created, location: @supervisor }
       else
         format.html { render :new }
@@ -37,12 +37,12 @@ class SupervisorController < ApplicationController
     end
   end
 
-  # PATCH/PUT /supervisor/1
-  # PATCH/PUT /supervisor/1.json
+  # PATCH/PUT /supervisors/1
+  # PATCH/PUT /supervisors/1.json
   def update
     respond_to do |format|
       if @supervisor.update(supervisor_params)
-        format.html { redirect_to @supervisor, notice: 'supervisor was successfully updated.' }
+        format.html { redirect_to @supervisor, notice: 'Supervisor was successfully updated.' }
         format.json { render :show, status: :ok, location: @supervisor }
       else
         format.html { render :edit }
@@ -51,12 +51,12 @@ class SupervisorController < ApplicationController
     end
   end
 
-  # DELETE /supervisor/1
-  # DELETE /supervisor/1.json
+  # DELETE /supervisors/1
+  # DELETE /supervisors/1.json
   def destroy
     @supervisor.destroy
     respond_to do |format|
-      format.html { redirect_to supervisor_url, notice: 'supervisor was successfully destroyed.' }
+      format.html { redirect_to supervisor_url, notice: 'Supervisor was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,11 +64,11 @@ class SupervisorController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_supervisor
-      @supervisor = supervisor.find(params[:id])
+      @supervisor = Supervisor.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def supervisor_params
-      params.require(:supervisor).permit(:nombre, :rut, :email, :telefono, :direccion)
+      params.require(:supervisor).permit(:nombre, :permitir, :revisión)
     end
 end
