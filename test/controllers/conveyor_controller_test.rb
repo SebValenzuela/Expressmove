@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TransportadorControllerTest < ActionDispatch::IntegrationTest
+class ConveyorControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
