@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conveyor</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Fecha</th>
+      <th>Direccion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conveyors.each do |conveyor| %>
+      <tr>
+        <td><%= conveyor.producto %></td>
+        <td><%= conveyor.fecha %></td>
+        <td><%= conveyor.direccion %></td>
+        <td><%= link_to 'Show', conveyor %></td>
+        <td><%= link_to 'Edit', edit_conveyor_path(conveyor) %></td>
+        <td><%= link_to 'Destroy', conveyor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conveyor', new_conveyor_path %>

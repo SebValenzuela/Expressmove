@@ -1,0 +1,32 @@
+<%= form_with(model: conveyor, local: true) do |form| %>
+  <% if conveyor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conveyor.errors.count, "error") %> prohibited this conveyor from being saved:</h2>
+
+      <ul>
+      <% conveyor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :producto %>
+    <%= form.text_field :producto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.text_field :fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.date_select :direccion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Producto:</strong>
+  <%= @conveyor.producto %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @conveyor.fecha %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @conveyor.direccion %>
+</p>
+
+<%= link_to 'Edit', edit_conveyor_path(@conveyor) %> |
+<%= link_to 'Back', conveyors_path %>
