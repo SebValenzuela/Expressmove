@@ -17,7 +17,7 @@ class SupervisorControllerTest < ActionDispatch::IntegrationTest
 
     test "should create supervisor" do
       assert_difference('Supervisor.count') do
-        post supervisors_url, params: { supervisor: { nombre: @supervisor.nombre, permitir: @supervisor.permitir, revision: @supervisor.revision } }
+        post supervisors_url, params: { supervisor: { name: @supervisor.name, permitir: @supervisor.permitir, revision: @supervisor.revision } }
       end
 
       assert_redirected_to supervisor_url(Supervisor.last)
