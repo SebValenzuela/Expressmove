@@ -56,7 +56,7 @@ class ConveyorController < ApplicationController
   def destroy
     @conveyor.destroy
     respond_to do |format|
-      format.html { redirect_to transportador_url, notice: 'Conveyor was successfully destroyed.' }
+      format.html { redirect_to conveyor_url, notice: 'Conveyor was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ConveyorController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def conveyor_params
-      params.require(:conveyor).permit(:producto, :fecha, :direccion)
+      params.require(:conveyor).permit(:product, :date, :address)
     end
 end

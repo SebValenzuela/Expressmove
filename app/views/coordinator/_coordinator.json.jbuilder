@@ -1,2 +1,2 @@
-json.extract! coordinator, :id, :nombre, :rut, :direccion, :email, :telefono, :control, :fecha, :created_at, :updated_at
+json.extract! coordinator, :id, :name, :rut, :address, :email, :telephone, :control, :date, :created_at, :updated_at
 json.url coordinator_url(coordinator, format: :json)

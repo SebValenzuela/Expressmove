@@ -5,13 +5,13 @@
 <table>
   <thead>
     <tr>
-      <th>Nombre</th>
+      <th>Name</th>
       <th>Rut</th>
-      <th>Direccion</th>
+      <th>Address</th>
       <th>Email</th>
-      <th>Telefono</th>
+      <th>Telephone</th>
       <th>Control</th>
-      <th>Fecha</th>
+      <th>Data</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,13 +19,13 @@
   <tbody>
     <% @coordinators.each do |coordinator| %>
       <tr>
-        <td><%= coordinator.nombre %></td>
+        <td><%= coordinator.name %></td>
         <td><%= coordinator.rut %></td>
-        <td><%= coordinator.direccion %></td>
+        <td><%= coordinator.address %></td>
         <td><%= coordinator.email %></td>
-        <td><%= coordinator.telefono %></td>
+        <td><%= coordinator.telephone %></td>
         <td><%= coordinator.control %></td>
-        <td><%= coordinator.fecha %></td>
+        <td><%= coordinator.date %></td>
         <td><%= link_to 'Show', coordinator %></td>
         <td><%= link_to 'Edit', edit_coordinator_path(coordinator) %></td>
         <td><%= link_to 'Destroy', coordinator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
