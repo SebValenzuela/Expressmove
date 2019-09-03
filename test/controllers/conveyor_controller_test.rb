@@ -17,7 +17,7 @@ class ConveyorControllerTest < ActionDispatch::IntegrationTest
 
   test "should create conveyor" do
     assert_difference('Conveyor.count') do
-      post conveyors_url, params: { conveyor: { fecha: @conveyor.fecha, direccion: @conveyor.direccion, producto: @conveyor.producto } }
+      post conveyors_url, params: { conveyor: { date: @conveyor.date, address: @conveyor.address, product: @conveyor.product } }
     end
 
     assert_redirected_to conveyor_url(Conveyor.last)
@@ -34,7 +34,7 @@ class ConveyorControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update conveyor" do
-    patch conveyor_url(@conveyor), params: { conveyor: { fecha: @conveyor.fecha, direccion: @conveyor.direccion, producto: @conveyor.producto } }
+    patch conveyor_url(@conveyor), params: { conveyor: { date: @conveyor.date, address: @conveyor.address, product: @conveyor.product } }
     assert_redirected_to conveyor_url(@conveyor)
   end
 
