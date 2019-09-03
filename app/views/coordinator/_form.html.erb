@@ -1,0 +1,52 @@
+<%= form_with(model: coordinator, local: true) do |form| %>
+  <% if coordinator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(coordinator.errors.count, "error") %> prohibited this coordinator from being saved:</h2>
+
+      <ul>
+      <% coordinator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rut %>
+    <%= form.text_field :rut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.date_select :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.date_select :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.date_select :telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :control %>
+    <%= form.text_field :control %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

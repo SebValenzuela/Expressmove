@@ -13,20 +13,20 @@
 ActiveRecord::Schema.define(version: 2019_08_01_001228) do
 
   create_table "customers", force: :cascade do |t|
-    t.string "nombre"
+    t.string "name"
     t.string "rut"
     t.string "email"
-    t.integer "telefono"
-    t.date "direccion"
+    t.integer "telephone"
+    t.date "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "locals", force: :cascade do |t|
-    t.string "nombre"
-    t.string "direccion"
-    t.string "propietario"
-    t.integer "telefono"
+    t.string "name"
+    t.string "address"
+    t.string "owner"
+    t.integer "telephone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_08_01_001228) do
   create_table "orders", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "product_id"
-    t.date "fecha"
+    t.date "date"
     t.float "monto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(version: 2019_08_01_001228) do
 
   create_table "products", force: :cascade do |t|
     t.integer "local_id"
-    t.string "nombre"
-    t.string "categoria"
-    t.string "marca"
+    t.string "name"
+    t.string "category"
+    t.string "mark"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["local_id"], name: "index_products_on_local_id"

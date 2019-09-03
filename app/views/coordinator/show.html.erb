@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @coordinator.nombre %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @coordinator.rut %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @coordinator.direccion %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @coordinator.email %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @coordinator.telefono %>
+</p>
+
+<p>
+  <strong>Control:</strong>
+  <%= @coordinator.control %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @coordinator.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_coordinator_path(@coordinator) %> |
+<%= link_to 'Back', coordinators_path %>
