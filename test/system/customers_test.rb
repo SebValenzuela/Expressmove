@@ -14,11 +14,11 @@ class CustomersTest < ApplicationSystemTestCase
     visit customers_url
     click_on "New Customer"
 
-    fill_in "Direccion", with: @customer.direccion
+    fill_in "Address", with: @customer.address
     fill_in "Email", with: @customer.email
-    fill_in "Nombre", with: @customer.nombre
+    fill_in "Name", with: @customer.name
     fill_in "Rut", with: @customer.rut
-    fill_in "Telefono", with: @customer.telefono
+    fill_in "Telephone", with: @customer.telephone
     click_on "Create Customer"
 
     assert_text "Customer was successfully created"
@@ -29,11 +29,11 @@ class CustomersTest < ApplicationSystemTestCase
     visit customers_url
     click_on "Edit", match: :first
 
-    fill_in "Direccion", with: @customer.direccion
+    fill_in "Address", with: @customer.address
     fill_in "Email", with: @customer.email
-    fill_in "Nombre", with: @customer.nombre
+    fill_in "Name", with: @customer.name
     fill_in "Rut", with: @customer.rut
-    fill_in "Telefono", with: @customer.telefono
+    fill_in "Telephone", with: @customer.telephone
     click_on "Update Customer"
 
     assert_text "Customer was successfully updated"
